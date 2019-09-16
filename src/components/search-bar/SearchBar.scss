@@ -1,0 +1,15 @@
+.search-bar {
+    display: flex;
+    margin: .5rem 0;
+
+    input {
+        margin-right: .5rem;
+        padding: .2rem 1.5rem;
+        border-radius: 50px;
+        border: 1.5px solid #D6D6D6;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px 0px;
+        font-size: .9rem;
+        color: var(--app-black);
+        width: 100%;
+    }
+}
