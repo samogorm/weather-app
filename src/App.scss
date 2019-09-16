@@ -4,3 +4,28 @@
   --app-black: #252725;
   --app-light-grey: #737373;
 }
+
+.app {
+  background: #F9F9F9;
+  padding: 2rem;
+  height: 100vh;
+
+  &__current-location {
+    display: flex;
+    flex-direction: column;
+
+    > h4 {
+      align-self: center;
+      margin-bottom: 2rem;
+    }
+
+    .weather-card {
+      width: 100%;
+      align-self: center;
+
+      @media (min-width: 1280px) {
+        width: 30rem;
+      }
+    }
+  }
+}

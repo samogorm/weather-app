@@ -5,6 +5,6 @@ export const WeatherIcon = props => {
     let imagePath = require(`./../../assets/weather-icons/${props.filename}`);
 
     return (
-        <img className="weather-icon" src={imagePath} alt={`Image of ${props.alt}`}/>
+        <img className="weather-icon" src={imagePath} alt={`${props.alt}`}/>
     )
 }

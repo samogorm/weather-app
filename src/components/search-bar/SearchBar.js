@@ -9,7 +9,7 @@ export const SearchBar = props => {
     const [searchTerm, setSearchTerm] = useState(null);
     const [searchResults, setSearchResults] = useState([]);
 
-    const passSearchResultsToParent = () => props.searchResults(searchResults);
+    const passSearchResultsToParent = () => props.getSearchResults(searchResults);
 
     return(
         <div className="search-bar">

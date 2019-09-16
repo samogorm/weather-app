@@ -1,0 +1,17 @@
+.search-results {
+    padding-inline-start: 0;
+    li {
+        list-style-type: none;
+        margin: .5rem 0;
+        padding: .8rem 1rem;
+        border: 1px solid rgba(214, 214, 214, 0.37);
+        border-left: 5px solid var(--app-yellow);
+
+        &:hover {
+            border: 1px solid var(--app-yellow);
+            border-left: 5px solid var(--app-yellow);
+            background: rgba(255, 239, 119, 0.226);
+            cursor: pointer;
+        } 
+    }
+}

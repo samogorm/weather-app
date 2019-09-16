@@ -6,10 +6,14 @@
         margin-right: .5rem;
         padding: .2rem 1.5rem;
         border-radius: 50px;
-        border: 1.5px solid #D6D6D6;
-        box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px 0px;
+        border: 1px solid #D6D6D6;
         font-size: .9rem;
         color: var(--app-black);
         width: 100%;
+
+        &:focus {
+            border: 1.5px solid var(--app-yellow);
+            outline: none;
+        }
     }
 }
