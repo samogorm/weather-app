@@ -3,6 +3,7 @@ import { getLocation, getWeatherConditions } from './constants/APIHelpers';
 import { Geolocation } from './components/geolocation/Geolocation';
 import './App.scss';
 import { Temperature } from './components/temperature/Temperature';
+import { SmallHeading } from './components/small-heading/SmallHeading';
 
 export const App = () => {
   const [currentLocation, setCurrentLocation] = useState({ name: 'Manchester', country: 'GB', key: '329260' });
@@ -36,6 +37,9 @@ export const App = () => {
     <div className="app">
       <Temperature
         value="32"
+      />
+      <SmallHeading 
+        value="Darwen, GB"
       />
       {/* <Geolocation
         currentPosition={updateCurrentPosition}
