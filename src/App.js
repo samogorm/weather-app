@@ -5,6 +5,7 @@ import './App.scss';
 import { Temperature } from './components/temperature/Temperature';
 import { SmallHeading } from './components/small-heading/SmallHeading';
 import {Subtitle} from './components/subtitle/Subtitle';
+import { WeatherIcon } from './components/weather-icon/WeatherIcon';
 
 export const App = () => {
   const [currentLocation, setCurrentLocation] = useState({ name: 'Manchester', country: 'GB', key: '329260' });
@@ -43,6 +44,7 @@ export const App = () => {
         value="Darwen, GB"
       />
       <Subtitle value="Sunny, partly cloudy"/>
+      <WeatherIcon filename="1-sunny.svg" />
       {/* <Geolocation
         currentPosition={updateCurrentPosition}
       /> */}
