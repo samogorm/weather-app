@@ -8,7 +8,6 @@ export const App = () => {
   const [currentWeatherConditions, setCurrentWeatherConditions] = useState(null);
 
   useEffect(() => {
-      //getLocation(currentLocation).then(data => console.log('data: ', data));
       console.log("The location: ", currentLocation);
       console.log("The current weather is: ", currentWeatherConditions);
       return function(){};
@@ -35,9 +34,9 @@ export const App = () => {
   return(
     <div className="app">
       <p>Weather App</p>
-      <Geolocation
+      {/* <Geolocation
         currentPosition={updateCurrentPosition}
-      />
+      /> */}
     </div>
   );
 }

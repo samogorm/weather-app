@@ -25,9 +25,9 @@ export const Geolocation = (props) => {
                 message: null,
                 data: null
             }
-
-            passValueBackToParent(result);
+            
             setCurrentPosition(result);
+            passValueBackToParent(currentPosition);
 
             return false;
         }
