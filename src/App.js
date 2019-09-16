@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { getLocation, getWeatherConditions } from './constants/APIHelpers';
 import { Geolocation } from './components/geolocation/Geolocation';
 import './App.scss';
+import { Temperature } from './components/temperature/Temperature';
 
 export const App = () => {
   const [currentLocation, setCurrentLocation] = useState({ name: 'Manchester', country: 'GB', key: '329260' });
@@ -33,7 +34,9 @@ export const App = () => {
 
   return(
     <div className="app">
-      <p>Weather App</p>
+      <Temperature
+        temperature="32"
+      />
       {/* <Geolocation
         currentPosition={updateCurrentPosition}
       /> */}
