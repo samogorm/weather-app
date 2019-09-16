@@ -35,7 +35,7 @@ export const App = () => {
   return(
     <div className="app">
       <Temperature
-        temperature="32"
+        value="32"
       />
       {/* <Geolocation
         currentPosition={updateCurrentPosition}
