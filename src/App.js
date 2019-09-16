@@ -4,6 +4,7 @@ import { Geolocation } from './components/geolocation/Geolocation';
 import './App.scss';
 import { Temperature } from './components/temperature/Temperature';
 import { SmallHeading } from './components/small-heading/SmallHeading';
+import {Subtitle} from './components/subtitle/Subtitle';
 
 export const App = () => {
   const [currentLocation, setCurrentLocation] = useState({ name: 'Manchester', country: 'GB', key: '329260' });
@@ -41,6 +42,7 @@ export const App = () => {
       <SmallHeading 
         value="Darwen, GB"
       />
+      <Subtitle value="Sunny, partly cloudy"/>
       {/* <Geolocation
         currentPosition={updateCurrentPosition}
       /> */}
