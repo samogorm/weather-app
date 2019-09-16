@@ -2,9 +2,9 @@ import React from 'react';
 import './WeatherIcon.scss';
 
 export const WeatherIcon = props => {
-    let imagePath = require(`./../../assets/icons/${props.filename}`);
+    let imagePath = require(`./../../assets/weather-icons/${props.filename}`);
 
     return (
-        <img className="weather-icon" src={imagePath} />
+        <img className="weather-icon" src={imagePath} alt={`Image of ${props.alt}`}/>
     )
 }

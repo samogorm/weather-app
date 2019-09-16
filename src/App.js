@@ -6,6 +6,8 @@ import { Temperature } from './components/temperature/Temperature';
 import { SmallHeading } from './components/small-heading/SmallHeading';
 import {Subtitle} from './components/subtitle/Subtitle';
 import { WeatherIcon } from './components/weather-icon/WeatherIcon';
+import { Button } from './components/button/Button';
+import { faSearch, faPlus, faCross } from '@fortawesome/free-solid-svg-icons'
 
 export const App = () => {
   const [currentLocation, setCurrentLocation] = useState({ name: 'Manchester', country: 'GB', key: '329260' });
@@ -45,6 +47,12 @@ export const App = () => {
       />
       <Subtitle value="Sunny, partly cloudy"/>
       <WeatherIcon filename="1-sunny.svg" />
+      <Button 
+        type="button"
+        icon={faPlus}
+        label="Add Location"
+        colour="yellow"
+      />
       {/* <Geolocation
         currentPosition={updateCurrentPosition}
       /> */}

@@ -1,0 +1,32 @@
+.button {
+    border: none;
+    border-radius: 50rem;
+    padding: .5rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 1px 0px;
+
+    &--yellow {
+        background: var(--app-yellow);
+        color: var(--app-black);
+    }
+
+    svg {
+        height: auto;
+        width: 1.2rem !important;
+        margin: 0 .4rem 0 0;
+    }
+
+    span {
+        font-weight: 600;
+        font-size: .9rem;
+        line-height: 2;
+    }
+
+    &:hover {
+        background: var(--app-yellow--hover);
+        cursor: pointer;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px 0px;
+    }
+}
