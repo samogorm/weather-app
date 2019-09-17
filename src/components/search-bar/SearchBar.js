@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { getLocation, getWeatherConditions } from './../../constants/APIHelpers';
+import { getLocation } from './../../constants/APIHelpers';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import './../button/Button.scss';

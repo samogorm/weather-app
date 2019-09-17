@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons'
+import Loader from 'react-loader-spinner';
 import { getLocation, getWeatherConditions } from './constants/APIHelpers';
 import { Geolocation } from './components/geolocation/Geolocation';
 import { SmallHeading } from './components/small-heading/SmallHeading';
@@ -9,6 +10,7 @@ import { WeatherCard } from './components/weather-card/WeatherCard';
 import { WeatherIcons } from './constants/WeatherIcons';
 import { getWeatherConditionsLocalStorage } from './constants/LocalStorage';
 
+import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import './App.scss';
 
 export const App = () => {
@@ -48,7 +50,16 @@ export const App = () => {
      )
     }
 
-    return null;
+    return (
+      <Loader
+        type="ThreeDots"
+        color="#fe7"
+        height={50}
+        width={50}
+        timeout={3000} //3 secs
+
+      />
+    );
   }
 
   const getWeatherIconFileName = (iconKey) => {
