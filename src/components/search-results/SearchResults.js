@@ -22,7 +22,7 @@ export const SearchResults = props => {
             });
         }
 
-        return 'No results found.';
+        return <p>No results found.</p>;
     }
 
     return (

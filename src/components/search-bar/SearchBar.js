@@ -9,15 +9,13 @@ export const SearchBar = props => {
     const [searchTerm, setSearchTerm] = useState(null);
     const [searchResults, setSearchResults] = useState([]);
 
-    const passSearchResultsToParent = () => props.getSearchResults(searchResults);
-
     return(
         <div className="search-bar">
             <input 
                 id="search-bar" 
                 name="search" 
                 placeholder={props.searchLabel} 
-                onBlur={(event) => setSearchTerm(event.target.value)} 
+                onBlur={(event) => setSearchTerm(event.target.value)}
             />
             <button 
                 id="search-bar-button" 
@@ -25,7 +23,7 @@ export const SearchBar = props => {
                 className="button button--yellow"
                 onClick={() => getLocation(searchTerm).then((data) => {
                     setSearchResults(data);
-                    passSearchResultsToParent();
+                    props.getSearchResults(data);
                 })}
             >
                 <FontAwesomeIcon icon={faSearch} />

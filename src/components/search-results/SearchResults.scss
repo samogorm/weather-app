@@ -3,8 +3,15 @@
     background:white;
     border-radius: 5px;
     border: 1px solid rgba(214, 214, 214, 0.37);
-    height: 25rem;
+    max-height: 25rem;
     overflow: scroll;
+    position: absolute;
+    z-index: 999;
+
+    > p {
+        text-align: center;
+        margin: 2rem 0;
+    }
 
     li {
         list-style-type: none;

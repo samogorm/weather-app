@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { SearchBar } from './../search-bar/SearchBar';
 import { SearchResults } from '../search-results/SearchResults';
 import { getWeatherConditions } from './../../constants/APIHelpers';
@@ -8,6 +8,7 @@ import './SearchWrapper.scss';
 
 export const SearchWrapper = props => {
     const [searchResults, setSearchResults] = useState([]);
+    const [isResultsOpen, setIsResultsOpen] = useState(false);
 
     const getSelectedWeatherConditions = (location) => getWeatherConditions(location.key).then(data => {
         let weatherCondition = {
@@ -27,24 +28,27 @@ export const SearchWrapper = props => {
         props.setIsSearchOpen(false);
     });
 
-    const renderSearchResults = () => {
-        if (searchResults.length > 0) {
-            return (
-                <SearchResults
-                    results={searchResults}
-                    getSelectedResult={(values) => getSelectedWeatherConditions(values)}
-                />
-            )
-        }
-    }
+    useEffect(() => {
+    }, [searchResults])
 
     return (
         <div className="search-wrapper">
             <SearchBar
                 searchLabel="Enter city name..."
-                getSearchResults={(value) => setSearchResults(value)}
+                getSearchResults={(value) => {
+                    console.log("The value: ", value);
+                    setSearchResults(value);
+                    setIsResultsOpen(true);
+                }}
             />
-          { renderSearchResults() }
+            { 
+                isResultsOpen ? 
+                <SearchResults
+                    results={searchResults}
+                    getSelectedResult={(values) => getSelectedWeatherConditions(values)}
+                /> 
+                : null 
+            }
         </div>
     );
 }
