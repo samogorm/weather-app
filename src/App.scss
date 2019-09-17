@@ -93,4 +93,13 @@
     }
 
   }
+
+  &__app-notice {
+    margin: 5rem 0;
+    text-align: center;
+
+    a {
+      color: var(--app-black);
+    }
+  }
 }

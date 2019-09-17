@@ -12,6 +12,7 @@ import { getWeatherConditionsLocalStorage } from './constants/LocalStorage';
 
 import 'react-loader-spinner/dist/loader/css/react-spinner-loader.css';
 import './App.scss';
+import { Subtitle } from './components/subtitle/Subtitle';
 
 export const App = () => {
   const [currentLocation, setCurrentLocation] = useState({ name: 'Manchester', country: 'GB', key: '329260' });
@@ -116,6 +117,11 @@ export const App = () => {
         <div className="app__other-locations__cards">
           {renderOtherWeatherConditions()}
         </div>
+      </section>
+
+      <section className="app__app-notice">
+        <Subtitle value="This app uses the Accuweather API and is limited to 50 API calls a day." />
+        Weather icons from <a href="https://www.flaticon.com/authors/vitaly-gorbachev">Flat Icon</a>
       </section>
     </div>
   );
