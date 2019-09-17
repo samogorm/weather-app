@@ -3,12 +3,17 @@
   --app-yellow--hover: rgba(255, 239, 119, 0.863);
   --app-black: #252725;
   --app-light-grey: #737373;
+  --app-red: #ee5253;
 }
 
 .app {
   background: #F9F9F9;
-  padding: 2rem;
-  height: 100vh;
+  padding: 2rem .1rem;
+  min-height: 100vh;
+
+  @media (min-width: 960px) {
+    padding: 2rem;
+  }
 
   &__current-location {
     display: flex;
@@ -27,5 +32,64 @@
         width: 30rem;
       }
     }
+  }
+
+  &__add-location {
+    display: flex;
+    justify-content: center;
+
+    .add-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+
+      @media (min-width: 1280px){
+        width: 30rem;
+      }
+
+
+      > button {
+        margin-top: 2rem;
+        width: 12rem;
+      }
+
+      #search-bar {
+        width: 100%;
+
+        @media (min-width: 1280px) {
+          width: 23rem;
+        }
+      }
+
+      .search-results {
+        position: absolute;
+        width: 30rem;
+      }
+    }
+  }
+
+  &__other-locations {
+    margin-top: 2rem;
+    
+    &__cards {
+      margin: 2rem 0;
+      display: grid;
+      grid-gap: 2rem;
+
+      @media (min-width: 960px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px;
+      }
+
+      @media (min-width: 1280px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+     
+      @media (min-width: 1400px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
   }
 }

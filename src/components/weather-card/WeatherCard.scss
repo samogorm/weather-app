@@ -4,6 +4,7 @@
     box-shadow: 0 24px 30px 0 rgba(37,39,37,0.09);
     border-radius: 5px;
     padding: 2rem;
+    position: relative;
 
     &__body {
         display: flex;
@@ -14,5 +15,30 @@
     &__weather_info {
         display: flex;
         flex-direction: column;
+    }
+
+    .remove-btn {
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: -1px;
+        right: -1px;
+        border-radius: 0 5px 0 5px;
+        visibility: hidden;
+        transition: all .5s ease-in-out;
+        opacity: 0;
+
+        svg {
+            margin: 0 !important;
+            width: 20px !important;
+            height: 20px !important;
+        }
+    }
+
+    &:hover {
+        .remove-btn {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 }

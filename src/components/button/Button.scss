@@ -12,6 +12,11 @@
         color: var(--app-black);
     }
 
+    &--red {
+        background: var(--app-red);
+        color: var(--app-black);
+    }
+
     svg {
         height: auto;
         width: 1.2rem !important;
@@ -25,9 +30,12 @@
     }
 
     &:hover {
-        background: var(--app-yellow--hover);
         cursor: pointer;
         box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px 0px;
+    }
+
+    &--yellow:hover {
+        background: var(--app-yellow--hover);
     }
 
     &:focus {

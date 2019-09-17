@@ -11,11 +11,11 @@ export const SearchResults = props => {
             return props.results.map(result => {
                 return (
                     <li id={result.Key} key={result.Key} onClick={() => {
-                        let selected = { name: result.Country.EnglishName, country: result.Country.ID, key: result.Key };
+                        let selected = { name: result.EnglishName, country: result.Country.ID, key: result.Key };
                         passSelectedResultToParent(selected);
                     }}>
                         <SmallHeading value={result.EnglishName} />
-                        <Subtitle value={`${result.Country.EnglishName}, ${result.Country.ID}`} />
+                        <Subtitle value={`${result.EnglishName}, ${result.Country.ID}`} />
                         <Subtitle value={result.Region.EnglishName} />
                     </li>
                 )
