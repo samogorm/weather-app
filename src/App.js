@@ -66,7 +66,7 @@ export const App = () => {
     let icon = WeatherIcons.find(icon => icon.id === iconKey);
 
     if(icon !== null && icon !== undefined) return icon.filename;
-    else return '1-sunny.svg';
+    else return 'default-icon.svg';
   }
 
   const renderOtherWeatherConditions = () => {

@@ -22,6 +22,21 @@ export const WeatherIcons = [
     {
         id: 5,
         label: 'Hazy Sunshine',
-        filename: '6-mostly-cloudy'
+        filename: '5-hazy-sunshine.svg'
+    },
+    {
+        id: 6,
+        label: 'Mostly Cloudy',
+        filename: '6-mostly-cloudy.svg'
+    },
+    {
+        id: 7,
+        label: 'Cloudy',
+        filename: '7-cloudy.svg'
+    },
+    {
+        id: 12,
+        label: 'Mist',
+        filename: '12-fog.svg'
     }
 ]
