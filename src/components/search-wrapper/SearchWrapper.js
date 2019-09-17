@@ -36,7 +36,6 @@ export const SearchWrapper = props => {
             <SearchBar
                 searchLabel="Enter city name..."
                 getSearchResults={(value) => {
-                    console.log("The value: ", value);
                     setSearchResults(value);
                     setIsResultsOpen(true);
                 }}
